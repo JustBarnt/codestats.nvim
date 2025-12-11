@@ -59,7 +59,8 @@ function M.setup(options)
     interval = 60,
   })
 
-  opts["token"] = merged_options["token"] or vim.env.CODESTATS_API_KEY
+  -- TODO: Allow definition of an environment variable to look for.
+  opts["token"] = merged_options["token"] or vim.env.CODE_STATS_API_TOKEN
   opts["endpoint"] = merged_options["endpoint"]
   opts["interval"] = merged_options["interval"]
 
